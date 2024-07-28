@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation Summary</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        .full-height {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container-centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .alert {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <section id="quotation" class="full-height px-lg-5">
+        <div class="container container-centered">
+            <div class="row pb-4 w-100 justify-content-center">
+                <div class="col-lg-10 d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-brand">QUOTATION SUMMARY</h6>
+                        <h1>Confirm Your Quotation</h1>
+                    </div>
+                    <a href="index.html" class="btn btn-brand">Back to Services</a>
+                </div>
+            </div>
+
+            <div class="row gy-4 justify-content-center w-100">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="card-custom rounded-5 bg-base shadow-effect">
+                        <div class="card-custom-content p-4">
+                            <h4>Quotation Details</h4>
+                            <p id="quotationDetails"></p>
+                            <form id="confirmForm" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="uploadFiles" class="form-label">Upload additional files related to your request (pdf, docx):</label>
+                                    <input type="file" class="form-control" id="uploadFiles" name="files" multiple required>
+                                </div>
+                                <button type="submit" class="btn btn-brand">Confirm</button>
+                            </form>
+                            <div id="confirmationMessage" class="alert mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/scripts/aos.js"></script>
+    <script src="../assets/scripts/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            function getQueryParams() {
+                const params = new URLSearchParams(window.location.search);
+                return {
+                    service: params.get('service'),
+                    name: params.get('name'),
+                    email: params.get('email'),
+                    details: params.get('details'),
+                    totalCost: params.get('totalCost')
+                };
+            }
+
+            const params = getQueryParams();
+            $('#quotationDetails').html(`
+                <p><strong>Service:</strong> ${params.service}</p>
+                <p><strong>Name:</strong> ${params.name}</p>
+                <p><strong>Email:</strong> ${params.email}</p>
+                <p><strong>Details:</strong> ${params.details}</p>
+                <p><strong>Total Cost:</strong> PHP ${params.totalCost}</p>
+            `);
+
+            $('#confirmForm').submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const formData = new FormData(this);
+                const confirmationMessage = $('#confirmationMessage');
+
+                confirmationMessage.hide(); // Hide previous message
+
+                fetch('http://localhost:3500/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'success') {
+                        confirmationMessage.text('Quotation and File Upload Successful!').removeClass('alert-danger').addClass('alert alert-success').css('opacity', '1').show();
+                    } else {
+                        confirmationMessage.text('Error: ' + data.message).removeClass('alert-success').addClass('alert alert-danger').css('opacity', '1').show();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    confirmationMessage.text('An unexpected error occurred: ' + error.message).removeClass('alert-success').addClass('alert alert-danger').css('opacity', '1').show();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

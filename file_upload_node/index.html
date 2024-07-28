@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joackim Agno Portfolio - Services</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        .full-height {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container-centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .dropdown-checkbox {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-checkbox label {
+            display: block;
+            padding: 8px;
+        }
+
+        .dropdown-checkbox label:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-checkbox {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SERVICES -->
+    <section id="services" class="full-height px-lg-5">
+        <div class="container container-centered">
+            <div class="row pb-4 w-100 justify-content-center">
+                <div class="col-lg-10 d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-brand">SERVICES</h6>
+                        <h1>Request My Services</h1>
+                    </div>
+                    <a href="../index.html" class="btn btn-brand">Go Back Home</a>
+                </div>
+            </div>
+
+            <div class="row gy-4 justify-content-center w-100">
+                <!-- Web Designing Service -->
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="card-custom rounded-5 bg-base shadow-effect">
+                        <div class="card-custom-content p-4">
+                            <h4>Web Designing</h4>
+                            <p>Provide professional web designing services to create visually appealing, user-friendly, and responsive websites.</p>
+                            <form class="serviceForm" data-service="web_designing">
+                                <div class="mb-3">
+                                    <label for="nameWeb" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="nameWeb" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailWeb" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="emailWeb" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="webpagesWeb" class="form-label">Number of Webpages</label>
+                                    <input type="number" class="form-control webpagesInput" id="webpagesWeb" min="1" value="1" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="detailsWeb" class="form-label">Additional Details</label>
+                                    <textarea class="form-control" id="detailsWeb" rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-brand">Submit Request</button>
+                                <div class="totalCostMessage mt-3">Total Cost: PHP 0</div>
+                            </form>
+                            <div class="responseMessage mt-3" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Embedded Systems Service -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-custom rounded-5 bg-base shadow-effect">
+                        <div class="card-custom-content p-4">
+                            <h4>Embedded Systems</h4>
+                            <p>Design and develop embedded systems for various applications such as home automation, IoT devices, robotics, and more.</p>
+                            <form class="serviceForm" data-service="embedded_systems">
+                                <div class="mb-3">
+                                    <label for="nameEmbedded" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="nameEmbedded" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailEmbedded" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="emailEmbedded" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="microprocessor" class="form-label">Microprocessor</label>
+                                    <select class="form-select" id="microprocessor">
+                                        <option value="">Select a microprocessor</option>
+                                        <option value="esp32">ESP32</option>
+                                        <option value="pic16f877a">PIC16F877A</option>
+                                        <option value="arduino">Arduino</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Basic Sensors</label><br>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button">
+                                            Select Sensors
+                                        </button>
+                                        <div class="dropdown-checkbox">
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="dht11"> DHT11 (Temperature & Humidity) - PHP 70</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="hc-sr04"> HC-SR04 (Ultrasonic) - PHP 50</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="mq-2"> MQ-2 (Gas) - PHP 100</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="ldr"> LDR (Light Dependent Resistor) - PHP 30</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="pir"> PIR (Motion Sensor) - PHP 150</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="bmp180"> BMP180 (Barometric Pressure) - PHP 120</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="flame"> Flame Sensor - PHP 50</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="rain"> Rain Sensor - PHP 60</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="detailsEmbedded" class="form-label">Additional Details</label>
+                                    <textarea class="form-control" id="detailsEmbedded" rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-brand">Submit Request</button>
+                                <div class="totalCostMessage mt-3">Total Cost: PHP 0</div>
+                            </form>
+                            <div class="responseMessage mt-3" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development Service -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card-custom rounded-5 bg-base shadow-effect">
+                        <div class="card-custom-content p-4">
+                            <h4>Web Development</h4>
+                            <p>Develop custom software solutions tailored to the specific needs of clients. This can include desktop applications, mobile apps, and more.</p>
+                            <form class="serviceForm" data-service="web_development">
+                                <div class="mb-3">
+                                    <label for="nameDev" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="nameDev" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailDev" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="emailDev" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="detailsDev" class="form-label">Additional Details</label>
+                                    <textarea class="form-control" id="detailsDev" rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-brand">Submit Request</button>
+                                <div class="totalCostMessage mt-3">Total Cost: PHP 5000</div>
+                            </form>
+                            <div class="responseMessage mt-3" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/scripts/aos.js"></script>
+    <script src="../assets/scripts/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.webpagesInput, .sensorInput, #microprocessor').on('change', function() {
+                computeCost($(this).closest('form'));
+            });
+
+            function computeCost(form) {
+                const service = form.data('service');
+                let totalCost = 0;
+
+                if (service === 'web_designing') {
+                    const webpages = parseInt(form.find('.webpagesInput').val()) || 0;
+                    totalCost = 500 * 2 * webpages; // 2 days per webpage at $500 per day
+                }
+
+                if (service === 'embedded_systems') {
+                    totalCost = 400; // Base cost per day
+                    const microprocessor = form.find('#microprocessor').val();
+                    if (microprocessor === 'esp32') {
+                        totalCost += 500; // Example price for ESP32 in PHP
+                    } else if (microprocessor === 'pic16f877a') {
+                        totalCost += 750; // Example price for PIC16F877A in PHP
+                    } else if (microprocessor === 'arduino') {
+                        totalCost += 1000; // Example price for Arduino in PHP
+                    }
+
+                    form.find('.sensorInput:checked').each(function() {
+                        const sensor = $(this).val();
+                        if (sensor === 'dht11') {
+                            totalCost += 70; // Example price for DHT11 in PHP
+                        } else if (sensor === 'hc-sr04') {
+                            totalCost += 50; // Example price for HC-SR04 in PHP
+                        } else if (sensor === 'mq-2') {
+                            totalCost += 100; // Example price for MQ-2 in PHP
+                        } else if (sensor === 'ldr') {
+                            totalCost += 30; // Example price for LDR in PHP
+                        } else if (sensor === 'pir') {
+                            totalCost += 150; // Example price for PIR in PHP
+                        } else if (sensor === 'bmp180') {
+                            totalCost += 120; // Example price for BMP180 in PHP
+                        } else if (sensor === 'flame') {
+                            totalCost += 50; // Example price for Flame Sensor in PHP
+                        } else if (sensor === 'rain') {
+                            totalCost += 60; // Example price for Rain Sensor in PHP
+                        }
+                    });
+                }
+
+                if (service === 'web_development') {
+                    totalCost = 5000; // Fixed cost in PHP
+                }
+
+                form.find('.totalCostMessage').text(`Total Cost: PHP ${totalCost}`);
+            }
+
+            $('.serviceForm').submit(function(event) {
+                event.preventDefault();
+
+                const form = $(this);
+                const name = form.find('input[type="text"]').val();
+                const email = form.find('input[type="email"]').val();
+                const service = form.data('service');
+                const details = form.find('textarea').val();
+                const totalCost = form.find('.totalCostMessage').text().replace('Total Cost: PHP ', '');
+
+                // Create a query string
+                const queryString = `?service=${service}&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&details=${encodeURIComponent(details)}&totalCost=${totalCost}`;
+
+                // Redirect to the quotation page
+                window.location.href = 'quotation.html' + queryString;
+            });
+
+            // Initial calculation of cost on page load
+            $('.serviceForm').each(function() {
+                computeCost($(this));
+            });
+        });
+    </script>
+</body>
+
+</html>
