@@ -72,19 +72,19 @@
                             <form class="serviceForm" data-service="web_designing">
                                 <div class="mb-3">
                                     <label for="nameWeb" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="nameWeb" required>
+                                    <input type="text" class="form-control" id="nameWeb" required data-bs-toggle="tooltip" data-bs-placement="top" title="Please enter your full name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="emailWeb" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="emailWeb" required>
+                                    <input type="email" class="form-control" id="emailWeb" required data-bs-toggle="tooltip" data-bs-placement="top" title="Please enter your email address">
                                 </div>
                                 <div class="mb-3">
                                     <label for="webpagesWeb" class="form-label">Number of Webpages</label>
-                                    <input type="number" class="form-control webpagesInput" id="webpagesWeb" min="1" value="1" required>
+                                    <input type="number" class="form-control webpagesInput" id="webpagesWeb" min="1" value="1" required data-bs-toggle="tooltip" data-bs-placement="top" title="Enter the number of webpages you need">
                                 </div>
                                 <div class="mb-3">
                                     <label for="detailsWeb" class="form-label">Additional Details</label>
-                                    <textarea class="form-control" id="detailsWeb" rows="3" required></textarea>
+                                    <textarea class="form-control" id="detailsWeb" rows="3" required data-bs-toggle="tooltip" data-bs-placement="top" title="Provide any additional details for your request"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-brand">Submit Request</button>
                                 <div class="totalCostMessage mt-3">Total Cost: PHP 0</div>
@@ -103,15 +103,15 @@
                             <form class="serviceForm" data-service="embedded_systems">
                                 <div class="mb-3">
                                     <label for="nameEmbedded" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="nameEmbedded" required>
+                                    <input type="text" class="form-control" id="nameEmbedded" required data-bs-toggle="tooltip" data-bs-placement="top" title="Please enter your full name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="emailEmbedded" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="emailEmbedded" required>
+                                    <input type="email" class="form-control" id="emailEmbedded" required data-bs-toggle="tooltip" data-bs-placement="top" title="Please enter your email address">
                                 </div>
                                 <div class="mb-3">
                                     <label for="microprocessor" class="form-label">Microprocessor</label>
-                                    <select class="form-select" id="microprocessor">
+                                    <select class="form-select" id="microprocessor" data-bs-toggle="tooltip" data-bs-placement="top" title="Select the type of microprocessor">
                                         <option value="">Select a microprocessor</option>
                                         <option value="esp32">ESP32</option>
                                         <option value="pic16f877a">PIC16F877A</option>
@@ -125,20 +125,20 @@
                                             Select Sensors
                                         </button>
                                         <div class="dropdown-checkbox">
-                                            <label><input class="form-check-input sensorInput" type="checkbox" value="dht11"> DHT11 (Temperature & Humidity) - PHP 70</label>
-                                            <label><input class="form-check-input sensorInput" type="checkbox" value="hc-sr04"> HC-SR04 (Ultrasonic) - PHP 50</label>
-                                            <label><input class="form-check-input sensorInput" type="checkbox" value="mq-2"> MQ-2 (Gas) - PHP 100</label>
-                                            <label><input class="form-check-input sensorInput" type="checkbox" value="ldr"> LDR (Light Dependent Resistor) - PHP 30</label>
-                                            <label><input class="form-check-input sensorInput" type="checkbox" value="pir"> PIR (Motion Sensor) - PHP 150</label>
-                                            <label><input class="form-check-input sensorInput" type="checkbox" value="bmp180"> BMP180 (Barometric Pressure) - PHP 120</label>
-                                            <label><input class="form-check-input sensorInput" type="checkbox" value="flame"> Flame Sensor - PHP 50</label>
-                                            <label><input class="form-check-input sensorInput" type="checkbox" value="rain"> Rain Sensor - PHP 60</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="dht11" data-bs-toggle="tooltip" data-bs-placement="right" title="DHT11 (Temperature & Humidity) - PHP 70"> DHT11 (Temperature & Humidity) - PHP 70</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="hc-sr04" data-bs-toggle="tooltip" data-bs-placement="right" title="HC-SR04 (Ultrasonic) - PHP 50"> HC-SR04 (Ultrasonic) - PHP 50</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="mq-2" data-bs-toggle="tooltip" data-bs-placement="right" title="MQ-2 (Gas) - PHP 100"> MQ-2 (Gas) - PHP 100</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="ldr" data-bs-toggle="tooltip" data-bs-placement="right" title="LDR (Light Dependent Resistor) - PHP 30"> LDR (Light Dependent Resistor) - PHP 30</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="pir" data-bs-toggle="tooltip" data-bs-placement="right" title="PIR (Motion Sensor) - PHP 150"> PIR (Motion Sensor) - PHP 150</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="bmp180" data-bs-toggle="tooltip" data-bs-placement="right" title="BMP180 (Barometric Pressure) - PHP 120"> BMP180 (Barometric Pressure) - PHP 120</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="flame" data-bs-toggle="tooltip" data-bs-placement="right" title="Flame Sensor - PHP 50"> Flame Sensor - PHP 50</label>
+                                            <label><input class="form-check-input sensorInput" type="checkbox" value="rain" data-bs-toggle="tooltip" data-bs-placement="right" title="Rain Sensor - PHP 60"> Rain Sensor - PHP 60</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="detailsEmbedded" class="form-label">Additional Details</label>
-                                    <textarea class="form-control" id="detailsEmbedded" rows="3" required></textarea>
+                                    <textarea class="form-control" id="detailsEmbedded" rows="3" required data-bs-toggle="tooltip" data-bs-placement="top" title="Provide any additional details for your request"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-brand">Submit Request</button>
                                 <div class="totalCostMessage mt-3">Total Cost: PHP 0</div>
@@ -157,15 +157,15 @@
                             <form class="serviceForm" data-service="web_development">
                                 <div class="mb-3">
                                     <label for="nameDev" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="nameDev" required>
+                                    <input type="text" class="form-control" id="nameDev" required data-bs-toggle="tooltip" data-bs-placement="top" title="Please enter your full name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="emailDev" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="emailDev" required>
+                                    <input type="email" class="form-control" id="emailDev" required data-bs-toggle="tooltip" data-bs-placement="top" title="Please enter your email address">
                                 </div>
                                 <div class="mb-3">
                                     <label for="detailsDev" class="form-label">Additional Details</label>
-                                    <textarea class="form-control" id="detailsDev" rows="3" required></textarea>
+                                    <textarea class="form-control" id="detailsDev" rows="3" required data-bs-toggle="tooltip" data-bs-placement="top" title="Provide any additional details for your request"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-brand">Submit Request</button>
                                 <div class="totalCostMessage mt-3">Total Cost: PHP 5000</div>
@@ -186,6 +186,12 @@
     <script src="../assets/scripts/main.js"></script>
     <script>
         $(document).ready(function() {
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+
             $('.webpagesInput, .sensorInput, #microprocessor').on('change', function() {
                 computeCost($(this).closest('form'));
             });
