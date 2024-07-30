@@ -2,6 +2,7 @@ const express = require("express");
 const fileUpload = require("express-fileupload");
 const path = require("path");
 const cors = require("cors");
+const fs = require("fs");
 
 const filesPayloadExists = require('./middleware/filesPayloadExists');
 const fileExtLimiter = require('./middleware/fileExtLimiter');
@@ -38,5 +39,19 @@ app.post('/upload',
         return res.json({ status: 'success', message: Object.keys(files).toString() });
     }
 );
+
+// Route to serve HTML content from a file
+app.get('/content', (req, res) => {
+    const filePath = path.join(__dirname, 'content.html');
+    console.log(`Attempting to read file at: ${filePath}`); // Log the file path
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the HTML file:', err);
+            return res.status(500).send('Error reading the HTML file.');
+        }
+        res.send(data);
+    });
+});
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

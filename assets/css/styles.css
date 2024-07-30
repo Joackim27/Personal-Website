@@ -223,6 +223,26 @@ img{
     height: 100%;
 }
 
+#contentContainer {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: normal; /* Allow the content to wrap if necessary */
+    transition: width 0.5s ease-in-out;
+}
+
+.service {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's total width */
+}
+
+
+
+
 
 
 

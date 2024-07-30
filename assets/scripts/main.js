@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-    // Google Charts functionality
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(loadChartData);
+// Google Charts functionality
+google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.setOnLoadCallback(loadChartData);
 
 function loadChartData() {
     $.getJSON('data.json', function (data) {
@@ -65,5 +65,37 @@ function drawChart3(chartData) {
     var chart = new google.visualization.PieChart(document.getElementById('chart_div3'));
     chart.draw(data, options);
 }
+
+
+
+
+    document.getElementById('readMeLink').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        fetch('http://localhost:3500/content')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contentContainer').innerHTML = data;
+                document.getElementById('contentContainer').style.display = 'block';
+                document.getElementById('readMeLink').style.display = 'none';
+                document.getElementById('closeMeLink').style.display = 'inline';
+            })
+            .catch(error => console.error('Error fetching content:', error));
+    });
+
+    document.getElementById('closeMeLink').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        document.getElementById('contentContainer').style.display = 'none';
+        document.getElementById('readMeLink').style.display = 'inline';
+        document.getElementById('closeMeLink').style.display = 'none';
+    });
+
+
+
+
+
+
+
 
 
