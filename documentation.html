@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +16,11 @@
             align-items: center;
             padding: 20px;
         }
+
         .full-width {
             width: 100%;
         }
+
         .section-title {
             margin-top: 20px;
             font-size: 24px;
@@ -25,6 +28,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- DOCUMENTATION -->
@@ -33,14 +37,14 @@
             <!-- Title Page -->
             <div class="full-width">
                 <h1 class="text-center">Project Documentation</h1>
-                <p class="text-center">Joackim Pether R. Ano</p>
+                <p class="text-center">Joackim Pether R. Agno</p>
                 <p class="text-center">LBYCPG3 EQ3</p>
-                
             </div>
 
             <!-- Declaration Page -->
             <div class="full-width section-title">Declaration</div>
-            <p>I, Joackim Pether R. Agno, hereby declare that this document my own work and nothing in this document involves plagiarism.</p>
+            <p>I, Joackim Pether R. Agno, hereby declare that this document is my own work and that nothing in this
+                document involves plagiarism.</p>
 
             <!-- Table of Contents -->
             <div class="full-width section-title">Table of Contents</div>
@@ -50,16 +54,32 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#accomplishments">Accomplishments</a></li>
                 <li><a href="index.html#articles">Technical Articles</a></li>
-
             </ul>
 
             <!-- Acknowledgements -->
             <div id="acknowledgements" class="full-width section-title">Acknowledgements</div>
-            <p>I acknowledge my professor for giving the lectures necessessary for completion of project such as HTML, CSS, JS, JQuery, Bootstrap, Node.JS, and React.JS. I Also acknowledge Dave Gray, a youtuber, whom i watched for understanding more about how Node.Js works. I also thank the following sources I used such as W3 schools and Bootstrap. </p>
+            <p>I acknowledge my professor for giving the lectures necessary for the completion of the project, such as
+                HTML, CSS, JS, JQuery, Bootstrap, Node.JS, and React.JS. I also acknowledge Dave Gray, a YouTuber, whom
+                I watched to understand more about how Node.JS works. I also thank the following sources I used, such as
+                W3Schools and Bootstrap.</p>
 
             <!-- Introduction -->
             <div id="introduction" class="full-width section-title">Introduction / Project Overview / Objectives</div>
-            <p>[Provide an introduction to your project, an overview of what the project is about, and the objectives you aim to achieve]</p>
+            <p>This project, entitled "Joackim Agno Portfolio," is a web development project aimed at showcasing a
+                professional portfolio by demonstrating the ability to develop a website using HTML, CSS, JavaScript,
+                Bootstrap, Node, and React. This website features various sections, such as a personal profile, photo
+                album, technical articles, and professional information and services. Each section is designed to
+                highlight different aspects of my skills, achievements, and capabilities, providing a view of my
+                personal and professional journey as a Computer Engineer. This project integrates advanced web
+                technologies to create a dynamic, responsive, and user-friendly personal website. Moreover, the website
+                implements password-secured pages and server-side implementations. The primary objective of this project
+                is to create a platform that effectively showcases my personal and professional achievements. Its key
+                functionalities include secure access using Node.js and AJAX for handling server-side operations and
+                asynchronous data exchanges, such as file uploads and content loading. Additionally, the technical
+                articles section utilizes data visualization techniques with Google Charts to present data clearly. The
+                professional services section includes an interactive form that processes job orders and provides
+                quotations based on user inputs. Overall, the project ensures consistent design and high usability
+                across all sections using Bootstrap for a unified theme.</p>
 
             <!-- Summary Table -->
             <div id="summary" class="full-width section-title">Summary Table</div>
@@ -72,56 +92,176 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- PERSONAL ELEMENTS -->
                     <tr>
                         <td>Personal Elements</td>
-                        <td>                        
+                        <td>
                             <ul>
-                            <li>Personal Profile Page</li>
-                            <p>consider this as an "about me" page. Sensitive personal details can be ommited</p>
-                            <li>Password-secured pages</li>
-                            <p>At least 2 webpages that have restricted access only to those who are given access accounts</p>
-                            <li>Photo Album</li>
-                            <p>The accounts must be implemented with the use of AJAX and a text file whose content
-                                is formatted using JSON where data about accounts are stored. A password form must
-                                be implemented and if the credentials are incorrect or information is not found in the
-                                JSON file, access is not given (ie. the protected page(s) are not displayed).</p>
-                        </ul>
-                    </td>
-                        <td>[How Requirement 1 is Met]</td>
+                                <li>Personal Profile Page</li>
+                                <p>Consider this as an "about me" page. Sensitive personal details can be omitted.</p>
+                                <li>Password-secured pages</li>
+                                <p>At least two webpages that have restricted access only to those who are given access
+                                    accounts.</p>
+                                <p>The accounts must be implemented with the use of AJAX and a text file formatted using
+                                    JSON where data about accounts are stored. A password form must be implemented, and
+                                    if the credentials are incorrect or information is not found in the JSON file,
+                                    access is not given (i.e., the protected page(s) are not displayed).</p>
+
+                                <li>Photo Album</li>
+                                <p>This is a photo gallery implementation using jQuery, plugins, JavaScript libraries,
+                                    and/or web frameworks/APIs. The photos can be any arbitrary collection with at least
+                                    10 items. There should be an option for a slideshow, which will enable when a user
+                                    clicks on something.</p>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>For the personal page, it is a section with id="about" in my "index.html". It is
+                                    accessible through the sidebar. When clicking the about me page, it will scroll to
+                                    the page. It was first set up in a div class="container" with two elements, personal
+                                    information and education, divided into six large columns with "col-lg-6". For the
+                                    personal information, it is set up with "row-gy-4" with two elements covering the
+                                    whole spread of the column "col-12". For the education, it has the same setup as the
+                                    personal information column, and each element covers the whole 12 columns of
+                                    Bootstrap.</li>
+                                <li>
+                                    My password-secured pages are the resume and the photo album. The resume is a
+                                    project I did during the LBYCPG3 class, which is HTML and CSS only, and the photo
+                                    album is one of the requirements in this project. Both are accessible through their
+                                    respective buttons. Each button will direct to the "login.html", which opens a new
+                                    webpage that contains a form. This form asks for the email and password of the user.
+                                    The valid users who can access the photo album and resume are listed in the
+                                    "accounts.json" file, which shows the accepted email and password. In the login
+                                    page, there are two buttons for accessing either the resume or the photo album. Each
+                                    button has its JavaScript in "script.js" to verify if the entered details are
+                                    correct.
+                                </li>
+                                <li>
+                                    My photo album consists of 10 images. I utilized an image carousel provided by
+                                    Bootstrap and added elements by calling each div with the same class
+                                    "carousel-item". For the JavaScript of the carousel, it initializes without a
+                                    slideshow first. The slideshow only activates through a button click. Again, my
+                                    photo album is a password-secured page, so it's only accessible through the
+                                    login.html.
+                                </li>
+                            </ul>
+                        </td>
                     </tr>
+                    <!-- PROFESSIONAL ELEMENTS -->
                     <tr>
                         <td>Professional Elements</td>
-                        <td>                        
+                        <td>
                             <ul>
-                            <li>Portfolio Page</li>
-                            <p>consider this as an "about me" page. Sensitive personal details can be ommited</p>
-                            <li>Technical Articles</li>
-                            <p>At least 2 webpages that have restricted access only to those who are given access accounts</p>
-                            <li>Professional Services</li>
-                            <p>The accounts must be implemented with the use of AJAX and a text file whose content
-                                is formatted using JSON where data about accounts are stored. A password form must
-                                be implemented and if the credentials are incorrect or information is not found in the
-                                JSON file, access is not given (ie. the protected page(s) are not displayed).</p>
-                        </ul>
-                    </td>
-                        <td>[How Requirement 2 is Met]</td>
+                                <li>Portfolio Page</li>
+                                <p>Contains a list of CPE-relevant accomplishments, which may contain awards and/or
+                                    recognitions or completed projects with at least a description of the project.</p>
+                                <li>Technical Articles</li>
+                                <p>This is a collection of technical articles or tutorials. Article 1 should include an
+                                    embedded video player to play some related video. Articles 2 and 3 should
+                                    collectively incorporate bar, pie, and line charts using Google Charts.</p>
+                                <li>Professional Services</li>
+                                <p>This is one or more pages that offer certain CPE-related professional services. One
+                                    of the pages should include a form that specifies a job order/engagement form that
+                                    will be processed by JavaScript code upon submission and returns a summary page with
+                                    a quotation based on the form entries.</p>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>My portfolio page is in the section of index.html with id="accomplishments". This
+                                    shows all my past projects in my past courses. The section is divided into two
+                                    columns by "col-lg-6" so that each element or project I add is divided into two.
+                                    Next, each project I did is placed in a div class="card" with its respective photo,
+                                    title, and description.</li>
+                                <li>
+                                    My technical articles section is in the index.html with section id="articles". This
+                                    section is divided into three columns through "col-md-4". For the first article, it
+                                    consists of an embedded video. This embedded video is in an "iframe", and in order
+                                    for the YouTube link to work, I changed its URL to "youtube.com/embed/[link]". Next,
+                                    to do articles 2 and 3, I used a Google JavaScript library, specifically the Google
+                                    Charts library. For the data of both articles, it is specified in my data.json file.
+                                    Then, my main website will call the JavaScript function to load the data from JSON
+                                    using the library.
+                                </li>
+                                <li>
+                                    My services are in a section with id="services" in index.html. Each element is
+                                    divided into three columns through "col-md-4". I provided a title and a short
+                                    description. Each element has a href link going to my /file_upload_node/index.html.
+                                    This webpage is where all the forms are for inquiring about my services. In this
+                                    webpage, I have three services offered, and each has a respective form. The user has
+                                    to enter necessary details, and when they hover on the text boxes, tooltips appear.
+                                    When they submit the form, they will be redirected to another webpage that shows
+                                    their quotation and a file submission button. This file submission button is for
+                                    them to upload a PDF or DOCX file for additional information regarding the service
+                                    they require. This button runs through the Node.JS server.
+                                </li>
+                            </ul>
+                        </td>
                     </tr>
                     <tr>
                         <td>Other Requirements</td>
-                        <td>                        
+                        <td>
                             <ul>
-                            <li>Portfolio Page</li>
-                            <p>consider this as an "about me" page. Sensitive personal details can be ommited</p>
-                            <li>Technical Articles</li>
-                            <p>At least 2 webpages that have restricted access only to those who are given access accounts</p>
-                            <li>Professional Services</li>
-                            <p>The accounts must be implemented with the use of AJAX and a text file whose content
-                                is formatted using JSON where data about accounts are stored. A password form must
-                                be implemented and if the credentials are incorrect or information is not found in the
-                                JSON file, access is not given (ie. the protected page(s) are not displayed).</p>
-                        </ul>
-                    </td>
-                        <td>[How Requirement 2 is Met]</td>
+                                <li>Node.JS</li>
+                                <li>React.JS</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>First, I installed Node.js, then I opened my terminal with the path in the folder
+                                    where I wanted to store my Node files. Next, the command "npm init -y" is used to
+                                    initialize my package.json. This is a quick setup to have a package.json without
+                                    manually typing it. Next, I installed express-fileupload and nodemon.
+                                    Express-fileupload is for handling file uploads, and nodemon is for the constant
+                                    refresh of my server. In my package.json, my main file is "app.js", and I also
+                                    changed the "scripts" part: the "start" script to "node app.js" and the "dev" script
+                                    to "nodemon app.js". Next, I created the app.js file with express and cors as
+                                    required and set the port to 3500. Generally, for the file upload, its HTML file is
+                                    in the file_upload_node folder. It handles the submission button for the file
+                                    upload. I also added middleware for my file upload, which includes a file extension
+                                    limiter, file size limiter, and file existence checker. If the file meets all the
+                                    requirements of the middleware, I will fetch the Node server and get the file. For
+                                    the HTML loader using Node.JS, it is in the same folder as the file upload. The only
+                                    difference is how they are fetched. File uploads are fetched on port/upload, while
+                                    the HTML is fetched on port/content.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Website Technical Requirements</td>
+                        <td>
+                            <ul>
+                                <li>The website's look/theme should generally be set by Bootstrap.</li>
+                                <li>Any functionality requiring JavaScript may use native JavaScript or jQuery unless
+                                    explicitly stated in an item in this set of project guidelines.</li>
+                                <li>No standard database (MySQL, PostgreSQL, etc.) must be used.</li>
+                                <li>Unless otherwise specified, PHP or any other programming languages besides
+                                    JavaScript or related libraries cannot be used.</li>
+                                <li>Each web page must have the same look/theme and should include a header, footer,
+                                    navigation, and main content sections at the minimum.</li>
+                                <li>There should be at least one drop-down menu.</li>
+                                <li>One or more webpages should incorporate tooltips.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>First, for the Bootstrap requirements, I downloaded bootstrap.min.css and
+                                    bootstrap.bundle.min.js for the general setup of my website. Next, I downloaded
+                                    fonts I wanted to use on my website and added them to my assets folder. I also added
+                                    a JavaScript library called AOS (Animate On Scroll) for the animations of the
+                                    elements on my website. The files I added are aos.js and aos.css. Next, I added
+                                    another library, line-awesome.css, which I used for my href links on the website.
+                                    All of these are called in my website to use all libraries and Bootstrap.</li>
+                                <li>
+                                    I have an assets folder that holds all the images, scripts, fonts, and CSS files. To
+                                    apply the general theme to all my webpages, I declared all CSS in my styles.css
+                                    file. Then, for the general JavaScript functions, they are all declared in the
+                                    main.js file.
+                                </li>
+                                <li>The dropdown in this project is the sidebar. When the device width is too small, it
+                                    will become a dropdown menu. I have a navbar to navigate through index.html.</li>
+                            </ul>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -136,4 +276,5 @@
     <script src="./assets/scripts/aos.js"></script>
     <script src="./assets/scripts/main.js"></script>
 </body>
+
 </html>
