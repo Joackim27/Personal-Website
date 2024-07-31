@@ -69,27 +69,36 @@ function drawChart3(chartData) {
 
 
 
-    document.getElementById('readMeLink').addEventListener('click', function (event) {
-        event.preventDefault();
+document.getElementById('readMeLink').addEventListener('click', function (event) {
+    event.preventDefault();
 
-        fetch('http://localhost:3500/content')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('contentContainer').innerHTML = data;
-                document.getElementById('contentContainer').style.display = 'block';
-                document.getElementById('readMeLink').style.display = 'none';
-                document.getElementById('closeMeLink').style.display = 'inline';
-            })
-            .catch(error => console.error('Error fetching content:', error));
-    });
+    fetch('http://localhost:3500/content')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('contentContainer').innerHTML = data;
+            document.getElementById('contentContainer').style.display = 'block';
+            document.getElementById('readMeLink').style.display = 'none';
+            document.getElementById('closeMeLink').style.display = 'inline';
+        })
+        .catch(error => console.error('Error fetching content:', error));
+});
 
-    document.getElementById('closeMeLink').addEventListener('click', function (event) {
-        event.preventDefault();
+document.getElementById('closeMeLink').addEventListener('click', function (event) {
+    event.preventDefault();
 
-        document.getElementById('contentContainer').style.display = 'none';
-        document.getElementById('readMeLink').style.display = 'inline';
-        document.getElementById('closeMeLink').style.display = 'none';
-    });
+    document.getElementById('contentContainer').style.display = 'none';
+    document.getElementById('readMeLink').style.display = 'inline';
+    document.getElementById('closeMeLink').style.display = 'none';
+});
+
+document.getElementById('readMeLinkReact').addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('reactContainer').style.display = 'block';
+});
+
+document.getElementById('closeIframe').addEventListener('click', function (event) {
+    document.getElementById('reactContainer').style.display = 'none';
+});
 
 
 
