@@ -1,0 +1,18 @@
+{
+    "chart2": [
+        ["Course", "Difficulty (1-10)", { "role": "style" }],
+        ["Data Structures", 7, "#1f77b4"],
+        ["Algorithms", 8, "#ff7f0e"],
+        ["Computer Architecture", 9, "#2ca02c"],
+        ["Operating Systems", 7, "#d62728"],
+        ["Networking", 6, "color: #9467bd"]
+    ],
+    "chart3": [
+        ["Component", "Effort (%)"],
+        ["Planning", 10],
+        ["Research", 20],
+        ["Development", 40],
+        ["Testing", 20],
+        ["Documentation", 10]
+    ]
+}
